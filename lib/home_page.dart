@@ -2,11 +2,15 @@ import 'package:counter_homework/button_text.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  //названия очень важны
+  // не очень понятно что за каунтер почему он именно 113
   int _counter = 113;
 
   @override
@@ -19,6 +23,7 @@ class _HomePageState extends State<HomePage> {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               ButtonText('Нажми "-" для уменьшения'),
+              //в чем смысл этого бокса?
               const SizedBox(
                 height: 10,
               ),
@@ -42,9 +47,13 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
+              //и этого
               const SizedBox(
                 height: 10,
               ),
+              //строки в дарте принято оборачивать в одинарные кавычки
+              //со знаком минус правильно поступила
+              //а тут пришлось экранировать
               ButtonText("Нажми \"+\" для увеличения")
             ],
           ),
